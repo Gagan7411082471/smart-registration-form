@@ -1,0 +1,7 @@
+Flask
+Flask-Cors
+numpy
+opencv-python
+python-dotenv
+psycopg2-binary # Python adapter for PostgreSQL
+Flask-SQLAlchemy # ORM for Flask

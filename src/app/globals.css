@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 268 93% 95%;
+    --foreground: 257 20% 25%;
+    --card: 268 93% 98%;
+    --card-foreground: 257 20% 25%;
+    --popover: 268 93% 98%;
+    --popover-foreground: 257 20% 25%;
+    --primary: 257 41% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 268 50% 90%;
+    --secondary-foreground: 257 41% 50%;
+    --muted: 268 50% 90%;
+    --muted-foreground: 257 20% 45%;
+    --accent: 190 38% 44%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 268 50% 85%;
+    --input: 268 50% 92%;
+    --ring: 257 41% 50%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 257 20% 8%;
+    --foreground: 268 93% 95%;
+    --card: 257 20% 12%;
+    --card-foreground: 268 93% 95%;
+    --popover: 257 20% 12%;
+    --popover-foreground: 268 93% 95%;
+    --primary: 257 41% 60%;
+    --primary-foreground: 257 20% 10%;
+    --secondary: 257 20% 20%;
+    --secondary-foreground: 268 93% 95%;
+    --muted: 257 20% 20%;
+    --muted-foreground: 268 20% 65%;
+    --accent: 190 38% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 257 20% 25%;
+    --input: 257 20% 25%;
+    --ring: 257 41% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(at 27% 37%, hsl(var(--primary) / 0.1), transparent 50%),
+      radial-gradient(at 97% 21%, hsl(var(--accent) / 0.1), transparent 50%),
+      radial-gradient(at 22% 99%, hsl(var(--primary) / 0.1), transparent 50%),
+      radial-gradient(at 77% 89%, hsl(var(--accent) / 0.08), transparent 50%);
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease infinite;
+  }
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
